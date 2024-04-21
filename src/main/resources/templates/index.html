@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<form th:action="@{/addnewemployee}" th:object="${employee}" method="POST">
+    <label for="firstName">First name:</label><br>
+    <input type="text" id="firstName" placeholder="First name:" th:field="*{firstName}" required><br>
+    <label for="lastName">Last name:</label><br>
+    <input type="text" id="lastName" placeholder="Last name:" th:field="*{lastName}" required><br>
+    <button class="btn btn-primary" type="submit">Upload</button>
+</form>
+<div id="testid"></div>
+
+</body>
+</html>
